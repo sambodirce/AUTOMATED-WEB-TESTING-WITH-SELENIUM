@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 
 def test_web_app():
     # Initialize Firefox WebDriver with the specified Firefox binary path and GeckoDriver executable path
-    driver = webdriver.Firefox(firefox_binary='/usr/bin/firefox', executable_path='/home/sambd001/Documents/selenium/geckodriver')
+    driver = webdriver.Firefox(firefox_binary='/usr/bin/firefox')
 
     # Open a website
     driver.get('https://example.com')
