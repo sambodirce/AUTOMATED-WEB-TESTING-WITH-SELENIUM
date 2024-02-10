@@ -1,0 +1,26 @@
+name: Selenium Tests
+
+on:
+  push:
+  pull_request:
+    
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'  # Change this to your Python version
+
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+
+    - name: Run Selenium tests
+      run: |
+        python src/tests/test.py  # Replace this with the path to your Selenium test script
